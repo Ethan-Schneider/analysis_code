@@ -59,7 +59,7 @@ condition_2_data = data[data['study_condition'] == 2]
 
 # Bubble plot: count occurrences of each (final_edit_distance, num_changes) pair for each study condition
 for condition_data, label, color in [
-    (condition_1_data, 'Condition 1', 'blue'),
+    # (condition_1_data, 'Condition 1', 'blue')
     (condition_2_data, 'Condition 2', 'red')
 ]:
     # Convert columns to numeric (in case they are not)
@@ -77,7 +77,7 @@ for condition_data, label, color in [
         edgecolors='none'
     )
 
-plt.plot([0, 6], [5, 0], linestyle='--', color='gray')
+plt.plot([0, 5], [5, 0], linestyle='--', color='gray')
 plt.xlabel('Final Remaining Errors', fontsize=15)
 plt.ylabel('Number of Repair Attempts', fontsize=15)
 plt.title('Efficiency of User Error Corrections', fontsize=15)
